@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website với Ảnh nền thay đổi</title>
+    <link rel="stylesheet" href="style2.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;500;600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          once: false, // Cho phép hiệu ứng lặp lại khi cuộn
+          offset: 120,
+          duration: 800,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="menu" id="menu">
+      <nav class="main-nav">
+        <div class="nav-left">
+          <a href="index.html" class="nav-item">
+            <div class="icon-text">
+              <i class="fa-solid fa-house"></i>
+              <span data-lang-vi="TRANG CHỦ" data-lang-en="HOME"
+                >TRANG CHỦ</span
+              >
+            </div>
+          </a>
+          <a href="dichvu.html" class="nav-item">
+            <div class="icon-text">
+              <i class="fa-solid fa-gear"></i>
+              <span
+                data-lang-vi="DỊCH VỤ"
+                data-lang-en="SERVICES"
+                class="active"
+                >DỊCH VỤ</span
+              >
+            </div>
+          </a>
+          <a href="gioithieu.html" class="nav-item">
+            <div class="icon-text">
+              <i class="fa-solid fa-gift"></i>
+              <span data-lang-vi="GIỚI THIỆU" data-lang-en="INTRODUCE"
+                >GIỚI THIỆU</span
+              >
+            </div>
+          </a>
+        </div>
+        <div class="nav-logo">
+          <a href="#home">
+            <img src="logo start.png" alt="Logo STAR VIP MASSAGE" />
+          </a>
+        </div>
+        <div class="nav-right">
+          <a href="tuyendung.html" class="nav-item">
+            <div class="icon-text">
+              <i class="fa-solid fa-user"></i>
+              <span data-lang-vi="TUYỂN DỤNG" data-lang-en="RECRUIT"
+                >TUYỂN DỤNG</span
+              >
+            </div>
+          </a>
+          <a href="lienhe.html" class="nav-item">
+            <div class="icon-text">
+              <i class="fa-solid fa-envelope"></i>
+              <span data-lang-vi="LIÊN HỆ" data-lang-en="CONTACT">LIÊN HỆ</span>
+            </div>
+          </a>
+          <div
+            class="nav-item language-switcher"
+            id="languageSwitcher"
+            role="button"
+            aria-expanded="false"
+            aria-controls="langOptions"
+          >
+            <div class="icon-text">
+              <img
+                src="https://flagcdn.com/w40/vn.png"
+                alt="Cờ Việt Nam"
+                class="icon"
+              />
+              <span>NGÔN NGỮ</span>
+            </div>
+            <ul class="lang-options" id="langOptions">
+              <li data-lang="vi">
+                <img src="https://flagcdn.com/w40/vn.png" alt="Cờ Việt Nam" />
+                Tiếng Việt
+              </li>
+              <li data-lang="en">
+                <img src="https://flagcdn.com/w40/gb.png" alt="Cờ Anh" />
+                English
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- icon ứng dụng -->
+    <div class="fixed-icons" data-aos="fade-left" data-aos-duration="1000">
+      <a
+        href="https://www.facebook.com/profile.php?id=61577403387519"
+        target="_blank"
+        title="Messenger"
+      >
+        <img src="mess.webp" alt="Biểu tượng Messenger" />
+      </a>
+      <a href="https://zalo.me/0878078023" target="_blank" title="Zalo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+          alt="Biểu tượng Zalo"
+        />
+      </a>
+      <a
+        href="https://www.google.com/maps/place/Star+Vip+Massage/@21.0003004,105.80304"
+        target="_blank"
+        title="Map"
+      >
+        <img src="map.png" alt="Biểu tượng Google Maps" />
+      </a>
+    </div>
+
+    <!-- Combo dịch vụ -->
+    <section>
+      <div class="why-footer">
+        <img
+          src="bantay2.png"
+          alt="Biểu tượng STAR VIP MASSAGE"
+          class="why-logo"
+          loading="lazy"
+        />
+        <h2
+          class="why-title"
+          data-lang-vi="Combo Dịch Vụ"
+          data-lang-en="Service Combo"
+        >
+          Combo Dịch Vụ
+        </h2>
+      </div>
+
+      <div class="slider-wrapper">
+        <div class="slider-container">
+          <div
+            class="slider-track"
+            id="sliderTrack"
+            role="region"
+            aria-live="polite"
+          >
+            <div
+              class="combo-card"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            >
+              <a href="vip4.html">
+                <div class="combo-img-wrapper">
+                  <img
+                    src="kingpoolparty.jpg"
+                    class="combo-img"
+                    alt="VIP IV package"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <a
+                href="vip4.html"
+                class="combo-title"
+                data-lang-vi="VIP IV – King Pool Party"
+                data-lang-en="VIP IV – King Pool Party"
+              >
+                VIP IV – King Pool Party
+              </a>
+              <div class="combo-steps">
+                <div class="scroll-wrapper">
+                  <p
+                    data-lang-vi="Bước 1: Xông hơi thư giãn – Ngâm chân"
+                    data-lang-en="Step 1: Relaxing steam – Foot soak"
+                  >
+                    <strong>Bước 1:</strong> Xông hơi thư giãn – Ngâm chân
+                  </p>
+                  <p
+                    data-lang-vi="Bước 2: Massage trườn tinh dầu Nuru trị liệu (không giới hạn – miễn phí tinh dầu)"
+                    data-lang-en="Step 2: Nuru oil massage therapy (unlimited – free oil)"
+                  >
+                    <strong>Bước 2:</strong> Massage trườn tinh dầu Nuru trị
+                    liệu (không giới hạn – miễn phí tinh dầu)
+                  </p>
+                  <p
+                    data-lang-vi="Bước 3: Đắp mặt nạ – Tẩy tế bào chết cùng mỹ nhân"
+                    data-lang-en="Step 3: Facial mask – Body scrub with beautician"
+                  >
+                    <strong>Bước 3:</strong> Đắp mặt nạ – Tẩy tế bào chết cùng
+                    mỹ nhân
+                  </p>
+                  <p
+                    data-lang-vi="Bước 4: Massage body kết hợp dịch vụ thư giãn đặc biệt (H.., B..,CIA, HM,WC)"
+                    data-lang-en="Step 4: Full-body massage with special relaxing services (H.., B..,CIA, HM,WC)"
+                  >
+                    <strong>Bước 4:</strong> Massage body kết hợp các dịch vụ
+                    thư giãn đặc biệt (H.., B..,CIA, HM,WC)
+                  </p>
+                  <p
+                    data-lang-vi="Bước 5: Thư giãn hồ bơi riêng – Pool Party phong cách hoàng gia"
+                    data-lang-en="Step 5: Private pool relaxation – Royal-style Pool Party"
+                  >
+                    <strong>Bước 5:</strong> Thư giãn hồ bơi riêng – Pool Party
+                    phong cách hoàng gia
+                  </p>
+                </div>
+              </div>
+              <div
+                class="combo-price"
+                data-lang-vi="430.000đ"
+                data-lang-en="430,000 VND"
+              >
+                430.000đ
+              </div>
+            </div>
+
+            <div
+              class="combo-card"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="200"
+            >
+              <a href="vip3.html">
+                <div class="combo-img-wrapper">
+                  <img
+                    src="vip3.jpg"
+                    class="combo-img"
+                    alt="VIP III package"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <a
+                href="vip3.html"
+                class="combo-title"
+                data-lang-vi="VIP III – Đẳng Cấp Đế Vương"
+                data-lang-en="VIP III – Royal Luxury"
+              >
+                VIP III – Đẳng Cấp Đế Vương
+              </a>
+              <div class="combo-steps">
+                <div class="scroll-wrapper">
+                  <p
+                    data-lang-vi="Bước 1: Xông hơi thư giãn – Ngâm chân"
+                    data-lang-en="Step 1: Relaxing steam – Foot soak"
+                  >
+                    <strong>Bước 1:</strong> Xông hơi thư giãn – Ngâm chân
+                  </p>
+                  <p
+                    data-lang-vi="Bước 2: Massage trườn tinh dầu Nuru trị liệu (không giới hạn – miễn phí tinh dầu)"
+                    data-lang-en="Step 2: Nuru oil massage therapy (unlimited – free oil)"
+                  >
+                    <strong>Bước 2:</strong> Massage trườn tinh dầu Nuru trị
+                    liệu (không giới hạn – miễn phí tinh dầu)
+                  </p>
+                  <p
+                    data-lang-vi="Bước 3: Đắp mặt nạ – Tẩy tế bào chết cùng mỹ nhân"
+                    data-lang-en="Step 3: Facial mask – Body scrub with beautician"
+                  >
+                    <strong>Bước 3:</strong> Đắp mặt nạ – Tẩy tế bào chết cùng
+                    mỹ nhân
+                  </p>
+                  <p
+                    data-lang-vi="Bước 4: Massage body kết hợp các dịch vụ thư giãn đặc biệt (H.., B..,CIA, HM,WC)"
+                    data-lang-en="Step 4: Full-body massage with special relaxing services (H.., B..,CIA, HM,WC)"
+                  >
+                    <strong>Bước 4:</strong> Massage body kết hợp các dịch vụ
+                    thư giãn đặc biệt (H.., B..,CIA, HM,WC)
+                  </p>
+                </div>
+              </div>
+              <div
+                class="combo-price"
+                data-lang-vi="500.000đ"
+                data-lang-en="500,000 VND"
+              >
+                500.000đ
+              </div>
+            </div>
+
+            <div
+              class="combo-card"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
+              <a href="vip2.html">
+                <div class="combo-img-wrapper">
+                  <img
+                    src="vip1.png"
+                    class="combo-img"
+                    alt="VIP II package"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <a
+                href="vip2.html"
+                class="combo-title"
+                data-lang-vi="VIP II – Tận Hưởng Thiên Đường"
+                data-lang-en="VIP II – Paradise Experience"
+              >
+                VIP II – Tận Hưởng Thiên Đường
+              </a>
+              <div class="combo-steps">
+                <div class="scroll-wrapper">
+                  <p
+                    data-lang-vi="Bước 1: Xông hơi thư giãn – Ngâm chân"
+                    data-lang-en="Step 1: Relaxing steam – Foot soak"
+                  >
+                    <strong>Bước 1:</strong> Xông hơi thư giãn – Ngâm chân
+                  </p>
+                  <p
+                    data-lang-vi="Bước 2: Massage trườn tinh dầu Nuru trị liệu (không giới hạn – miễn phí tinh dầu)"
+                    data-lang-en="Step 2: Nuru oil massage therapy (unlimited – free oil)"
+                  >
+                    <strong>Bước 2:</strong> Massage trườn tinh dầu Nuru trị
+                    liệu (không giới hạn – miễn phí tinh dầu)
+                  </p>
+                  <p
+                    data-lang-vi="Bước 3: Tắm tiên hái đào – trải nghiệm thư giãn độc đáo"
+                    data-lang-en="Step 3: Unique relaxing bath experience"
+                  >
+                    <strong>Bước 3:</strong> Tắm tiên hái đào – trải nghiệm thư
+                    giãn độc đáo
+                  </p>
+                  <p
+                    data-lang-vi="Bước 4: Massage body kết hợp các dịch vụ cao cấp (H.., B..)"
+                    data-lang-en="Step 4: Full-body massage with premium services (H.., B..)"
+                  >
+                    <strong>Bước 4:</strong> Massage body kết hợp các dịch vụ
+                    cao cấp (H.., B..)
+                  </p>
+                </div>
+              </div>
+              <div
+                class="combo-price"
+                data-lang-vi="550.000đ"
+                data-lang-en="550,000 VND"
+              >
+                550.000đ
+              </div>
+            </div>
+
+            <div
+              class="combo-card"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="400"
+            >
+              <a href="vip1.html">
+                <div class="combo-img-wrapper">
+                  <img
+                    src="vip2.jpg"
+                    class="combo-img"
+                    alt="VIP I package"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <a
+                href="vip1.html"
+                class="combo-title"
+                data-lang-vi="VIP I – Đỉnh Cao Thư Giãn"
+                data-lang-en="VIP I – Ultimate Relaxation"
+              >
+                VIP I – Đỉnh Cao Thư Giãn
+              </a>
+              <div class="combo-steps">
+                <div class="scroll-wrapper">
+                  <p
+                    data-lang-vi="Bước 1: Xông hơi thư giãn – Ngâm chân"
+                    data-lang-en="Step 1: Relaxing steam – Foot soak"
+                  >
+                    <strong>Bước 1:</strong> Xông hơi thư giãn – Ngâm chân
+                  </p>
+                  <p
+                    data-lang-vi="Bước 2: Massage trườn tinh dầu Nuru trị liệu (không giới hạn – miễn phí tinh dầu)"
+                    data-lang-en="Step 2: Nuru oil massage therapy (unlimited – free oil)"
+                  >
+                    <strong>Bước 2:</strong> Massage trườn tinh dầu Nuru trị
+                    liệu (không giới hạn – miễn phí tinh dầu)
+                  </p>
+                  <p
+                    data-lang-vi="Bước 3: Massage body kết hợp các dịch vụ cao cấp (H.., B..)"
+                    data-lang-en="Step 3: Full-body massage with premium services (H.., B..)"
+                  >
+                    <strong>Bước 3:</strong> Massage body kết hợp các dịch vụ
+                    cao cấp (H.., B..)
+                  </p>
+                </div>
+              </div>
+              <div
+                class="combo-price"
+                data-lang-vi="600.000đ"
+                data-lang-en="600,000 VND"
+              >
+                600.000đ
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google map các cơ sở -->
+    <section class="branches">
+      <div class="branch">
+        <h3>CS1 – STAR VIP MASSAGE</h3>
+        <p>02 Ngụy Như Kon Tum, Thanh Xuân, Hà Nội</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.8086680886104!2d105.80045971089363!3d21.00030538867429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab3114692baf%3A0x26a46723ac0a1eed!2sStar%20Vip%20Massage!5e0!3m2!1svi!2s!4v1752144344011!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="branch">
+        <h3>CS2 – GOLD VIP MASSAGE</h3>
+        <p>136 Hồ Tùng Mậu (Cổng KĐT Goldmark City)</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.733316194059!2d105.7693767!3d21.043354100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4739e50b93%3A0x2b94e91c691994b5!2sGold%20Vip%20Massage!5e0!3m2!1svi!2s!4v1752244555724!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="branch">
+        <h3>CS3 – X-MEN VIP MASSAGE</h3>
+        <p>222 Cầu Bươu – Xa La – Hà Đông</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.7372449374107!2d105.7963386!3d20.963064499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad26531b23dd%3A0x35e47b1ecc387067!2sXmen2%20Massage!5e0!3m2!1svi!2s!4v1752144102885!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="branch">
+        <h3>CS4 – NNL VIP MASSAGE</h3>
+        <p>609 Lạc Long Quân – Tây Hồ</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.139925404322!2d105.80821711089519!3d21.0670728863806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab774ffe258d%3A0xdb8180fc918225f8!2zTWFzc2FnZSBOdXJ1IE5o4bqtdCBOZ3V54buHdCBM4bqndQ!5e0!3m2!1svi!2s!4v1752144300766!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="branch">
+        <h3>CS5 – MIDU VIP MASSAGE</h3>
+        <p>178 Đình Thôn, Mỹ Đình, Hà Nội</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.388938987031!2d105.77253511089404!3d21.017118088097423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455b722f011ed%3A0xc0a2ab9ecd136b2!2sVip%20Massage%20MIDU!5e0!3m2!1svi!2s!4v1752144380931!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="branch">
+        <h3>CS6 – MISAKI VIP MASSAGE</h3>
+        <p>41 Nguyễn Như Uyên – Cầu Giấy – Hà Nội</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3332254575016!2d105.78432031089413!3d21.019348788020753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab2e26dcd5f3%3A0xa8cf0b2c8e038c9a!2sMisaki%20Massage!5e0!3m2!1svi!2s!4v1752144250927!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll(".fixed-icons a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          console.log("Clicked:", link.href);
+        });
+      });
+
+      // Slider navigation
+      const sliderTrack = document.getElementById("sliderTrack");
+      const prevButton = document.querySelector(".slider-buttons .prev");
+      const nextButton = document.querySelector(".slider-buttons .next");
+      let scrollAmount = 0;
+
+      nextButton.addEventListener("click", () => {
+        scrollAmount += sliderTrack.offsetWidth;
+        if (scrollAmount >= sliderTrack.scrollWidth - sliderTrack.offsetWidth) {
+          scrollAmount = sliderTrack.scrollWidth - sliderTrack.offsetWidth;
+        }
+        sliderTrack.scrollTo({ left: scrollAmount, behavior: "smooth" });
+      });
+
+      prevButton.addEventListener("click", () => {
+        scrollAmount -= sliderTrack.offsetWidth;
+        if (scrollAmount < 0) scrollAmount = 0;
+        sliderTrack.scrollTo({ left: scrollAmount, behavior: "smooth" });
+      });
+    </script>
+    <script src="main2.js"></script>
+  </body>
+</html>
