@@ -35,30 +35,6 @@ body {
   align-items: center;
   transition: background 1s ease;
 }
-@media (max-width: 768px) {
-  .menu {
-    padding: 0 20px;
-    height: 80px;
-  }
-
-  .nav-logo img {
-    height: 60px;
-  }
-
-  .nav-item {
-    height: 80px;
-    min-width: auto;
-    font-size: 10px;
-  }
-
-  .icon-text i {
-    font-size: 18px;
-  }
-
-  .icon-text span {
-    font-size: 10px;
-  }
-}
 
 .menu.scrolled {
   background: rgb(253, 209, 209);
@@ -328,19 +304,6 @@ body {
   gap: 30px;
   z-index: 1000;
 }
-@media (max-width: 480px) {
-  .fixed-icons {
-    top: auto;
-    bottom: 30px;
-    right: 10px;
-    gap: 16px;
-  }
-
-  .fixed-icons a {
-    width: 45px;
-    height: 45px;
-  }
-}
 
 .fixed-icons a {
   width: 58px;
@@ -391,26 +354,6 @@ body {
   background-color: #f7efe7;
   gap: 80px;
   flex-wrap: wrap;
-}
-@media (max-width: 768px) {
-  .intro-section {
-    flex-direction: column;
-    gap: 30px;
-    padding: 40px 20px;
-  }
-
-  .intro-text h2 {
-    font-size: 28px;
-    padding-left: 10px;
-  }
-
-  .intro-text h5 {
-    font-size: 30px;
-  }
-
-  .intro-text p {
-    font-size: 15px;
-  }
 }
 
 .intro-text {
@@ -523,6 +466,11 @@ body {
     transform: scale(1.02);
     box-shadow: 0 0 0 0 rgba(255, 64, 129, 0);
   }
+}
+.videoStar video {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ==========================
@@ -725,6 +673,26 @@ body {
     box-shadow: 0 0 0 0 rgba(255, 64, 129, 0);
   }
 }
+
+/* ==========================
+   VIDEO SECTION
+   ========================== */
+.videoStar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background-color: #111;
+}
+
+.videoStar video {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
 /* Google map các cơ sở  */
 .branches {
   display: flex;
@@ -747,19 +715,6 @@ body {
   box-shadow: none;
   border-radius: 0;
   text-align: center;
-}
-@media (max-width: 768px) {
-  .branches {
-    padding: 30px 16px;
-  }
-
-  .branch h3 {
-    font-size: 16px;
-  }
-
-  .branch p {
-    font-size: 13px;
-  }
 }
 
 .branch h3 {
@@ -1044,32 +999,6 @@ body {
   align-items: center;
   position: relative;
   height: 640px;
-}
-@media (max-width: 768px) {
-  .combo-card {
-    height: auto;
-    margin-bottom: 40px;
-  }
-
-  .combo-img-wrapper {
-    width: 220px;
-    height: 220px;
-  }
-
-  .combo-title {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  .combo-steps p {
-    font-size: 14px;
-  }
-
-  .combo-price {
-    font-size: 14px;
-    padding: 8px 20px;
-    bottom: -20px;
-  }
 }
 
 .combo-img-wrapper {

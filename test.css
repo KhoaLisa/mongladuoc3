@@ -1,166 +1,85 @@
-/* ===== RESET + FONT ===== */
-* {
-  margin: 0;
-  padding: 0;
+/* ========= RESPONSIVE FIX CHUNG ========= */
+
+/* Layout co dãn đúng trên mobile/dọc/ngang */
+.slider-container,
+.slider-track,
+.combo-card,
+.intro-section,
+.why-grid,
+.videoStar video,
+.map iframe {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Be Vietnam Pro", sans-serif;
-  background: #fff0f5;
-  color: #333;
-  line-height: 1.6;
+/* Combo Card responsive */
+.combo-card {
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 100%;
+  margin: 10px;
 }
 
-/* ===== HEADER ===== */
-header {
-  background: #ffc1d4;
+/* Flex wrap toàn bộ phần có nhiều item */
+.slider-track,
+.why-grid {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
   flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  justify-content: center;
+  gap: 20px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* Video tự co dãn */
+.videoStar {
+  width: 100%;
+  overflow: hidden;
+}
+.videoStar video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.logo img {
-  height: 550px;
-}
-
-.logo span {
-  font-size: 20px;
-  font-weight: bold;
-  color: #c70039;
-}
-
-nav {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  color: #c70039;
-  transform: scale(1.05);
-}
-
-nav a.active {
-  color: #c70039;
-  border-bottom: 2px solid #c70039;
-}
-
-/* ===== MAIN CONTENT ===== */
-.content {
-  max-width: 860px;
-  margin: 60px auto;
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 18px;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.07);
-}
-
-.content p {
-  margin-bottom: 20px;
-  font-size: 17px;
-}
-
-.content h3 {
-  color: #c70039;
-  font-size: 22px;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.content h3::after {
-  content: "";
-  width: 40px;
-  height: 3px;
-  background: #c70039;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  border-radius: 2px;
-}
-
-.content ul {
-  padding-left: 20px;
-  margin-bottom: 25px;
-}
-
-.content ul li {
-  margin-bottom: 12px;
-  font-size: 16px;
-}
-
-/* ===== CONTACT ===== */
-.content strong {
-  color: #000;
-  font-weight: bold;
-}
-
-.content p:last-child {
-  margin-top: 30px;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-/* ===== CHAT ICONS ===== */
-.chat-icons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 999;
-}
-
-.chat-icons img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease;
-}
-
-.chat-icons img:hover {
-  transform: scale(1.1);
-}
-
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  header {
+  .combo-card,
+  .why-item,
+  .intro-text,
+  .nav-item,
+  .map iframe {
+    width: 100%;
+  }
+
+  .combo-card {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .scroll-wrapper {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .main-nav {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
-    padding: 20px;
   }
 
-  nav {
-    gap: 15px;
-    flex-wrap: wrap;
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (orientation: landscape) and (max-width: 920px) {
+  .combo-card {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
   }
 
-  .content {
-    margin: 20px;
-    padding: 25px;
+  .branches .map iframe {
+    height: 180px; /* thấp hơn chiều dọc để không chiếm hết màn */
   }
 }
