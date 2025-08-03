@@ -1299,3 +1299,112 @@ a.combo-title {
     padding: 10px 20px;
   }
 }
+/* Ẩn menu trái + phải và hiện hamburger khi trên mobile */
+@media (max-width: 768px) {
+  #navMenu,
+  #navRight {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  #navMenu.show,
+  #navRight.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    z-index: 1001;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  .nav-logo {
+    order: -1;
+    margin: 10px auto;
+  }
+}
+
+/* Mặc định ẩn hamburger trên desktop */
+.hamburger {
+  display: none;
+}
+/* ==========================
+   Responsive tweaks cho mobile
+   ========================== */
+@media (max-width: 768px) {
+  /* 1. Thu nhỏ font trong .intro-section để vừa trên điện thoại */
+  .intro-section .intro-text {
+    padding: 30px 10px;
+  }
+  .intro-text h5 {
+    font-size: 1.2rem; /* nhỏ hơn desktop */
+  }
+  .intro-text h2 {
+    font-size: 1.6rem;
+    padding-left: 0; /* bỏ indent lớn trên desktop */
+    text-align: center;
+  }
+  .intro-text .highlight,
+  .intro-text p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+  .intro-text button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  /* 2. Cho .image-carousel hiển thị 1 cột dọc */
+  .image-carousel {
+    display: block;
+    margin-left: 0;
+    width: 100%;
+  }
+  .image-carousel .carousel-track {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* khoảng cách giữa ảnh */
+  }
+  .image-carousel .image-item {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-track-wrapper {
+    overflow: visible; /* cho phép hiển thị đầy đủ khi dọc */
+  }
+
+  /* 3. Cho slider dịch vụ kéo trái/phải được trên mobile */
+  .slider-container {
+    overflow-x: auto; /* mở tính năng scroll ngang */
+    -webkit-overflow-scrolling: touch; /* mượt trên iOS */
+    padding-bottom: 10px; /* để không che combo-price */
+  }
+  .slider-track {
+    display: flex;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+  }
+  .combo-card {
+    flex: 0 0 auto; /* không bị co lại, cho phép scroll */
+  }
+}
