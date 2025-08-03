@@ -1301,36 +1301,33 @@ a.combo-title {
 }
 /* Ẩn menu trái + phải và hiện hamburger khi trên mobile */
 @media (max-width: 768px) {
-  #navMenu,
-  #navRight {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
-    top: 110px;
-    width: 100%;
-    left: 0;
-    padding: 10px 0;
-    z-index: 999;
-  }
-
-  #navMenu.show,
-  #navRight.show {
-    display: flex;
-  }
-
   .hamburger {
     display: block;
-    font-size: 24px;
+    font-size: 28px;
     background: none;
     border: none;
-    color: black;
+    color: white;
     cursor: pointer;
-    position: absolute;
-    left: 20px;
-    z-index: 1001;
+    margin-right: 10px;
   }
 
+  .nav-left,
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+  }
+
+  .nav-left.show,
+  .nav-right.show {
+    display: flex;
+  }
   .main-nav {
     flex-direction: column;
     align-items: flex-start;
@@ -1342,15 +1339,16 @@ a.combo-title {
     margin: 10px auto;
   }
 }
-
-/* Mặc định ẩn hamburger trên desktop */
-.hamburger {
-  display: none;
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* 👈 thêm dòng này để hiện nút hamburger trên mobile */
+  }
 }
+
 /* ==========================
    Responsive tweaks cho mobile
    ========================== */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   /* 1. Thu nhỏ font trong .intro-section để vừa trên điện thoại */
   .intro-section .intro-text {
     padding: 30px 10px;

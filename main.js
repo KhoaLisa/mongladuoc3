@@ -317,3 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Không tìm thấy languageSwitcher hoặc langOptions!");
   }
 });
+document.getElementById("hamburgerBtn").addEventListener("click", function () {
+  document.getElementById("navMenu").classList.toggle("show");
+  document.getElementById("navRight").classList.toggle("show");
+});
