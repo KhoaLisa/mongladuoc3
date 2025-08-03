@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website với Ảnh nền thay đổi</title>
     <link rel="stylesheet" href="tuyendung.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
 
     <link
       rel="stylesheet"
@@ -20,26 +14,18 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;500;600&family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script defer>
-      document.addEventListener("DOMContentLoaded", () => {
-        AOS.init({
-          once: false, // Cho phép hiệu ứng lặp lại khi cuộn
-          offset: 120,
-          duration: 800,
-        });
-      });
-    </script>
   </head>
   <body>
     <header class="menu" id="menu">
       <nav class="main-nav">
-        <div class="nav-left">
+        <!-- Hamburger button -->
+        <button class="hamburger" id="hamburgerBtn">☰</button>
+
+        <div class="nav-left" id="navMenu">
           <a href="index.html" class="nav-item">
             <div class="icon-text">
               <i class="fa-solid fa-house"></i>
-              <span data-lang-vi="TRANG CHỦ" data-lang-en="HOME"
+              <span data-lang-vi="TRANG CHỦ" data-lang-en="HOME" class="active"
                 >TRANG CHỦ</span
               >
             </div>
@@ -61,19 +47,18 @@
             </div>
           </a>
         </div>
+
         <div class="nav-logo">
           <a href="#home">
             <img src="logo start.png" alt="Logo STAR VIP MASSAGE" />
           </a>
         </div>
-        <div class="nav-right">
+
+        <div class="nav-right" id="navRight">
           <a href="tuyendung.html" class="nav-item">
             <div class="icon-text">
               <i class="fa-solid fa-user"></i>
-              <span
-                data-lang-vi="TUYỂN DỤNG"
-                data-lang-en="RECRUIT"
-                class="active"
+              <span data-lang-vi="TUYỂN DỤNG" data-lang-en="RECRUIT"
                 >TUYỂN DỤNG</span
               >
             </div>
@@ -84,13 +69,7 @@
               <span data-lang-vi="LIÊN HỆ" data-lang-en="CONTACT">LIÊN HỆ</span>
             </div>
           </a>
-          <div
-            class="nav-item language-switcher"
-            id="languageSwitcher"
-            role="button"
-            aria-expanded="false"
-            aria-controls="langOptions"
-          >
+          <div class="nav-item language-switcher" id="languageSwitcher">
             <div class="icon-text">
               <img
                 src="https://flagcdn.com/w40/vn.png"
@@ -141,7 +120,11 @@
       <h2 data-lang-vi="GIỚI THIỆU" data-lang-en="INTRODUCE">GIỚI THIỆU</h2>
     </div>
     <!-- content -->
-    <section class="intro-section">
+    <section
+      class="intro-section"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+    >
       <div class="container">
         <div class="intro-wrapper">
           <!-- Cột trái: Giới thiệu tuyển dụng -->
@@ -183,7 +166,7 @@
           </div>
 
           <!-- Cột phải: Dịch vụ massage -->
-          <div class="col-right">
+          <div class="col-right" data-aos="fade-left" data-aos-duration="1000">
             <h3 data-lang-vi="Dịch vụ Massage" data-lang-en="Massage Services">
               DỊCH VỤ MASSAGE
             </h3>
@@ -327,5 +310,14 @@
       </div>
     </section>
     <script src="main2.js"></script>
+    <script>
+      // JS để bật tắt menu
+      document
+        .getElementById("hamburgerBtn")
+        .addEventListener("click", function () {
+          document.getElementById("navMenu").classList.toggle("show");
+          document.getElementById("navRight").classList.toggle("show");
+        });
+    </script>
   </body>
 </html>

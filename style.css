@@ -1283,3 +1283,19 @@ a.combo-title {
 .carousel-track {
   box-sizing: border-box;
 }
+@media (max-width: 480px) {
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .intro-text h2 {
+    font-size: 26px;
+  }
+
+  .wavy-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
